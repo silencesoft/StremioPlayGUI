@@ -1,0 +1,35 @@
+{
+  "name": "StremioPlayGUI",
+  "description": "Play Stremio in Roku GUI.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Byron H.",
+    "email": "bh@silencesoft.pw",
+    "url": "https://silencesoft.pw"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node_modules/.bin/babel-node index.js",
+    "build": "node_modules/.bin/babel index.js -d bin/",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "proton-native": "latest"
+  },
+  "devDependencies": {
+    "electron-builder": "latest",
+    "babel-cli": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-stage-0": "latest",
+    "babel-preset-react": "latest"
+  },
+  "build": {
+    "appId": "pw.silencesoft",
+    "protonNodeVersion": "current",
+    "mac": {
+      "category": "pw.silencesoft.stremioapp",
+      "identity": "silencesoft"
+    }
+  }
+}
